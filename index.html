@@ -3,53 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marley - Portfolio GitHub</title>
-    <link rel="stylesheet" href="./assets/css/index.css">   
+    <title>Marley - Portfólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
     <header class="hero-section">
+        <div class="theme-toggle-wrapper">
+            <button class="github-button github-button-secondary theme-toggle" type="button" id="theme-toggle" aria-label="Alternar modo escuro" aria-pressed="false">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span>Modo escuro</span>
+            </button>
+        </div>
+
         <div class="profile-container">
-            <div class="profile-image-wrapper">
-                <div class="profile-image" style="background-image: url('./assets/img/marley.png');">
-                    <div class="status-gif">
-                        <img src="./assets/img/heart.gif" alt="Status Online" class="status-gif-image">                     
+            <div class="hero-profile-card">
+                <div class="profile-image-wrapper">
+                    <div class="profile-image" style="background-image: url('./assets/img/marley.jpeg');">
+                    </div>
+                </div>
+
+                <div class="hero-copy">
+                    <h2>Marley Teixeira Meira</h2>
+                    <span class="hero-kicker">Desenvolvedor Full Stack</span>
+                    <div class="hero-actions">
+                        <a href="#projetos" class="github-button">Ver projetos</a>
+                        <a href="#experiencias" class="github-button github-button-secondary">Experiências</a>
+                        <a href="https://github.com/Mxrlrey" target="_blank" rel="noopener noreferrer" class="github-button github-button-secondary">GitHub</a>
                     </div>
                 </div>
             </div>
 
-        <div class="intro-code">
-            <pre>
-                <code class="language-java">
-<span class="keyword">public class</span> <span class="classname">Main</span> {
+            <div class="intro-code" aria-label="Apresentação em formato de código Java">
+                <pre><code class="language-java"><span class="keyword">public class</span> <span class="classname">Main</span> {
     <span class="keyword">public static void</span> <span class="method">main</span>(<span class="datatype">String</span>[] args) {
-        <span class="system-call">System.out.println</span>(<span class="string-literal">"Olá, meu nome é Marley, atualmente cursando Análise e Desenvolvimento de Sistemas no IF Baiano - Campus Guanambi."</span>);
+        <span class="system-call">System.out.println</span>(<span class="string-literal">"Olá, meu nome é Marley. Sou formado em Análise e Desenvolvimento de Sistemas pelo IF Baiano - Campus Guanambi e atuo como desenvolvedor full stack, com foco em backend. Já participei do desenvolvimento de sistemas voltados para saúde, acessibilidade, gestão financeira e automação de processos."</span>);
     }
-}
-                </code>
-            </pre>
-        </div>
-        
-        <h2 class="section-title">Minhas Tecnologias:</h2> 
-        <div class="tech-stack-line">
-            <i class="fab fa-php tech-icon" title="PHP"></i>
-            <i class="fab fa-python tech-icon" title="Python"></i>
-            <i class="fab fa-java tech-icon" title="Java"></i>
-            <i class="fas fa-angle-double-right tech-icon" title="Inertia.js"></i>
-            <i class="fab fa-laravel tech-icon" title="Laravel"></i>
-            <i class="devicon-django-plain tech-icon" title="Django"></i>
-            <i class="fab fa-docker tech-icon" title="Docker"></i>
+}</code></pre>
+            </div>
+
+            <section class="tech-section" aria-labelledby="tech-title">
+                <h2 class="section-title" id="tech-title">Minhas Tecnologias</h2>
+                <div class="tech-stack-line">
+                    <i class="fab fa-php tech-icon" title="PHP"></i>
+                    <i class="fab fa-python tech-icon" title="Python"></i>
+                    <i class="fab fa-java tech-icon" title="Java"></i>
+                    <i class="fas fa-angle-double-right tech-icon" title="Inertia.js"></i>
+                    <i class="fab fa-laravel tech-icon" title="Laravel"></i>
+                    <i class="devicon-django-plain tech-icon" title="Django"></i>
+                    <i class="fab fa-docker tech-icon" title="Docker"></i>
+                </div>
+            </section>
         </div>
     </header>
 
     <main class="projects-section" id="projetos">
-        <h2 class="section-title">Meus Projetos:</h2>
+        <div class="projects-heading">
+            <h2 class="section-title">Meus Projetos</h2>
+            <p>Esta seção reúne projetos desenvolvidos em diferentes momentos da minha trajetória, desde estudos e iniciativas pessoais até sistemas utilizados em contextos reais.</p>
+        </div>
 
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('assets/img/projects/sirus/dashboard.png');"
                      data-project="Sirus"
                      data-gallery-key="sirus"
                      data-title="Dashboard"
@@ -58,7 +75,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria do Sirus"></div>
+                     aria-label="Ver galeria do Sirus">
+                    <img src="./assets/img/projects/sirus/dashboard.png" alt="Preview do dashboard do Sirus" loading="lazy">
+                </div>
                 <h3>Sirus - Sistema Integrado de Regulação e Urgência em Saúde</h3>
                 <p>O SIRUS é uma plataforma desenvolvida para o SAMU com o objetivo de substituir registros em papel por uma solução digital integrada, permitindo o acompanhamento do ciclo completo das ocorrências, incluindo despacho de unidades, controle operacional, geração de documentos, auditoria de ações e monitoramento de informações em tempo real.</p>
                 <div class="project-actions-row">
@@ -85,7 +104,6 @@
 
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('assets/img/projects/gnai/dashboard.png');"
                      data-project="GNAI"
                      data-gallery-key="gnai"
                      data-title="Dashboard"
@@ -94,7 +112,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria do GNAI"></div>
+                     aria-label="Ver galeria do GNAI">
+                    <img src="./assets/img/projects/gnai/dashboard.png" alt="Preview do dashboard do GNAI" loading="lazy">
+                </div>
                 <h3>GNAI - Gestão dos Núcleos de Acessibilidade e Inclusão</h3>
                 <p>O GNAI é uma plataforma web desenvolvida para apoiar a gestão dos Núcleos de Acessibilidade e Inclusão (NAIs) de instituições de ensino. O sistema centraliza informações e processos relacionados ao acompanhamento de estudantes, gerenciamento de tecnologias assistivas, registro de atendimentos, contribuindo para a organização das atividades do núcleo e para a melhoria dos processos de inclusão. Após seu desenvolvimento, a plataforma foi validada no NAPNE do IF Baiano – Campus Guanambi, onde foi utilizada para avaliação.</p>
                 <div class="project-actions-row">
@@ -121,7 +141,6 @@
 
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('assets/img/projects/controle-bar/frente-de-caixa.png');"
                      data-project="Sertão PDV"
                      data-gallery-key="sertao-pdv"
                      data-title="Frente de caixa"
@@ -130,7 +149,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria do Sertão PDV"></div>
+                     aria-label="Ver galeria do Sertão PDV">
+                    <img src="./assets/img/projects/controle-bar/frente-de-caixa.png" alt="Preview da frente de caixa do Sertão PDV" loading="lazy">
+                </div>
                 <h3>Sertão PDV</h3>
                 <p>O Sertão PDV é uma plataforma de ponto de venda e gestão operacional voltada para bares e restaurantes, desenvolvida para auxiliar no gerenciamento de comandas, pedidos, pagamentos, fechamento de contas e controle financeiro.</p>
                 <div class="project-actions-row">
@@ -155,7 +176,6 @@
 
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('assets/img/projects/radar-inclusivo/dashboard.png');"
                      data-project="Radar Inclusivo"
                      data-gallery-key="radar-inclusivo"
                      data-title="Dashboard"
@@ -164,7 +184,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria do Radar Inclusivo"></div>
+                     aria-label="Ver galeria do Radar Inclusivo">
+                    <img src="./assets/img/projects/radar-inclusivo/dashboard.png" alt="Preview do dashboard do Radar Inclusivo" loading="lazy">
+                </div>
                 <h3>Radar Inclusivo</h3>
                 <p>O Radar Inclusivo é uma plataforma web criada para auxiliar os Núcleos de Acessibilidade e Inclusão (NAIs) na gestão dos recursos de acessibilidade e no acompanhamento das demandas institucionais, centralizando informações sobre tecnologias assistivas, materiais pedagógicos acessíveis, barreiras de acessibilidade e demais atividades do núcleo.</p>
                     <div class="project-actions-row">
@@ -191,7 +213,6 @@
 
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('./assets/img/projects/joystick-juice/listagem-jogos.png');"
                      data-project="Joystick Juice"
                      data-gallery-key="joystick-juice"
                      data-title="Listagem de jogos"
@@ -200,7 +221,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria do Joystick Juice"></div>
+                     aria-label="Ver galeria do Joystick Juice">
+                    <img src="./assets/img/projects/joystick-juice/listagem-jogos.png" alt="Preview da listagem de jogos do Joystick Juice" loading="lazy">
+                </div>
                 <h3>Joystick Juice</h3>
                 <p>O Joystick Juice é uma plataforma web desenvolvida como parte das atividades avaliativas das disciplinas Programação para Web I e Programação para Web II. O projeto tem como objetivo oferecer um ambiente colaborativo para jogadores registrarem, organizarem e compartilharem suas experiências com jogos digitais.</p>
                     <div class="project-actions-row">
@@ -227,7 +250,6 @@
 
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('assets/img/projects/mundo-digital/servicos.png');"
                      data-project="Landing Page Mundo Digital"
                      data-gallery-key="mundo-digital"
                      data-title="Serviços"
@@ -236,7 +258,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria da Landing Page Mundo Digital"></div>
+                     aria-label="Ver galeria da Landing Page Mundo Digital">
+                    <img src="./assets/img/projects/mundo-digital/servicos.png" alt="Preview da seção de serviços da Landing Page Mundo Digital" loading="lazy">
+                </div>
                 <h3>Landing Page Mundo Digital</h3>
                 <p>Site desenvolvido como atividade avaliativa da disciplina de Estágio Supervisionado I do curso de Análise e Desenvolvimento de Sistemas. O projeto consistiu na criação de uma landing page institucional para divulgação dos serviços da empresa, incluindo manutenção de computadores e notebooks, suporte técnico e informações de contato.</p>
                     <div class="project-actions-row">
@@ -260,7 +284,6 @@
 
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('assets/img/projects/aee/cadastro-aluno.png');"
                      data-project="Sistema de Gestão AEE"
                      data-gallery-key="aee"
                      data-title="Cadastro de aluno"
@@ -269,7 +292,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria do Sistema de Gestão AEE"></div>
+                     aria-label="Ver galeria do Sistema de Gestão AEE">
+                    <img src="./assets/img/projects/aee/cadastro-aluno.png" alt="Preview do cadastro de aluno do Sistema de Gestão AEE" loading="lazy">
+                </div>
                 <h3>Sistema de Gestão AEE</h3>
                 <p>Trabalho desenvolvido para avaliação parcial da disciplina LPOO. A plataforma permite que educadores e gestores escolares planejem, acompanhem e documentem todo o processo de AEE de forma simples e eficiente.</p>
                     <div class="project-actions-row">
@@ -295,7 +320,6 @@
 
             <div class="project-card">
                 <div class="project-image-placeholder gallery-trigger"
-                     style="background-image: url('assets/img/projects/club-fullstack/listagem-usuarios.png');"
                      data-project="CRUD de Usuários e Formulário de Suporte"
                      data-gallery-key="club-fullstack"
                      data-title="Listagem de usuários"
@@ -304,7 +328,9 @@
                      role="button"
                      tabindex="0"
                      title="Ver galeria"
-                     aria-label="Ver galeria do projeto Clube Full-Stack"></div>
+                     aria-label="Ver galeria do projeto Clube Full-Stack">
+                    <img src="./assets/img/projects/club-fullstack/listagem-usuarios.png" alt="Preview da listagem de usuários do projeto Clube Full-Stack" loading="lazy">
+                </div>
                 <h3>CRUD de Usuários e Formulário de Suporte (Mailtrap)</h3>
                 <p>Projeto desenvolvido como parte dos estudos no curso Clube Full-Stack, ministrado por Alexandre Cardoso, com o objetivo de aprofundar os conhecimentos em PHP. A aplicação consiste em um sistema de gerenciamento de usuários com operações de cadastro, edição, listagem e remoção (CRUD), além de um formulário de suporte integrado ao envio de e-mails via SMTP para atendimento de solicitações dos usuários.</p>
                     <div class="project-actions-row">
@@ -329,6 +355,137 @@
         </div>
     </main>
 
+    <section class="experience-section" id="experiencias" aria-labelledby="experiences-title">
+        <div class="projects-heading experience-heading">
+            <h2 class="section-title" id="experiences-title">Experiências</h2>
+            <p>Histórico profissional organizado como uma linha do tempo, destacando responsabilidades, contextos de atuação e principais contribuições em cada etapa.</p>
+        </div>
+
+        <div class="cd-container experience-log-container">
+            <div id="cd-timeline" class="experience-timeline">
+                <article class="cd-timeline-block">
+                    <div class="cd-timeline-img cd-primary" aria-hidden="true">
+                        <i class="fa fa-code"></i>
+                    </div>
+
+                    <div class="cd-timeline-content">
+                        <div class="experience-card-header">
+                            <div>
+                                <span class="experience-action-label">Projeto institucional de pesquisa e extensão</span>
+                                <h3>Desenvolvedor Full Stack</h3>
+                                <p class="experience-company">Projeto SIRUS</p>
+                            </div>
+                            <span class="cd-date">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                Outubro de 2025 - Atualmente · 10 meses
+                            </span>
+                        </div>
+
+                        <div class="experience-meta">
+                            <span><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Guanambi, Bahia, Brasil</span>
+                            <span><i class="fa fa-briefcase" aria-hidden="true"></i> Híbrido</span>
+                        </div>
+
+                        <p>Desenvolvimento e evolução da versão 2.0 do SIRUS, plataforma de regulação médica adotada pelo SAMU de Guanambi, com mais de 3.900 atendimentos registrados e alcance de 23 municípios.</p>
+
+                        <div class="experience-details">
+                            <strong>Principais contribuições</strong>
+                            <ul>
+                                <li>Implementação de funcionalidades para gestão de ocorrências, colaboradores, permissões e fluxos operacionais.</li>
+                                <li>Desenvolvimento de mecanismos de auditoria, registro de sessões e rastreabilidade das ações dos usuários.</li>
+                                <li>Geração automatizada de documentos, assinaturas digitais, códigos QR e relatórios em PDF.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-footer">
+                            <small>Django · PostgreSQL · JavaScript · Docker</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cd-timeline-block">
+                    <div class="cd-timeline-img cd-info" aria-hidden="true">
+                        <i class="fa fa-laptop-code"></i>
+                    </div>
+
+                    <div class="cd-timeline-content">
+                        <div class="experience-card-header">
+                            <div>
+                                <span class="experience-action-label">Estágio</span>
+                                <h3>Estagiário de Desenvolvimento Web Full Stack</h3>
+                                <p class="experience-company">VISDOM Tecnologia da Informação</p>
+                            </div>
+                            <span class="cd-date">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                Fevereiro de 2026 - Maio de 2026 · 4 meses
+                            </span>
+                        </div>
+
+                        <div class="experience-meta">
+                            <span><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Guanambi, Bahia, Brasil</span>
+                            <span><i class="fa fa-briefcase" aria-hidden="true"></i> Híbrido</span>
+                        </div>
+
+                        <p>Desenvolvimento e manutenção de um sistema de atendimento ao cliente e gestão de Ordens de Serviço, atuando em funcionalidades, histórico, auditoria e refatoração de código legado.</p>
+
+                        <div class="experience-details">
+                            <strong>Principais contribuições</strong>
+                            <ul>
+                                <li>Manutenção de funcionalidades utilizando PHP, JavaScript, jQuery, AJAX e MySQL.</li>
+                                <li>Desenvolvimento de módulo de atividades integrado às Ordens de Serviço.</li>
+                                <li>Implementação de histórico, auditoria e rastreabilidade, além de refatoração de código legado.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-footer">
+                            <small>PHP · JavaScript · jQuery · AJAX · MySQL</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cd-timeline-block">
+                    <div class="cd-timeline-img cd-success" aria-hidden="true">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+
+                    <div class="cd-timeline-content">
+                        <div class="experience-card-header">
+                            <div>
+                                <span class="experience-action-label">Estágio</span>
+                                <h3>Estagiário de Desenvolvimento Front-end</h3>
+                                <p class="experience-company">Mundo Digital Tecnologia Serviços de Informática Ltda</p>
+                            </div>
+                            <span class="cd-date">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                Agosto de 2025 - Novembro de 2025 · 4 meses
+                            </span>
+                        </div>
+
+                        <div class="experience-meta">
+                            <span><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Guanambi, Bahia, Brasil</span>
+                            <span><i class="fa fa-briefcase" aria-hidden="true"></i> Presencial</span>
+                        </div>
+
+                        <p>Desenvolvimento de landing page institucional para divulgação dos serviços da Mundo Digital, com foco em apresentação da empresa e interfaces responsivas.</p>
+
+                        <div class="experience-details">
+                            <strong>Principais contribuições</strong>
+                            <ul>
+                                <li>Criação de página institucional para divulgação dos serviços da empresa.</li>
+                                <li>Implementação de interfaces responsivas utilizando HTML, CSS e JavaScript.</li>
+                                <li>Desenvolvimento das seções “Serviços” e “Sobre Nós”.</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-footer">
+                            <small>HTML · CSS · JavaScript · Suporte técnico</small>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
         <div class="gallery-modal-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
             <button class="gallery-modal-close" type="button" id="gallery-modal-close" aria-label="Fechar galeria">
@@ -352,6 +509,84 @@
     </div>
 
     <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('portfolio-theme');
+        const initialTheme = storedTheme || 'dark';
+
+        function applyTheme(theme) {
+            const isDark = theme === 'dark';
+            document.documentElement.classList.toggle('theme-dark', isDark);
+            themeToggle?.setAttribute('aria-pressed', String(isDark));
+
+            if (themeToggle) {
+                const icon = themeToggle.querySelector('i');
+                const label = themeToggle.querySelector('span');
+                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+                label.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+            }
+        }
+
+        applyTheme(initialTheme);
+
+        themeToggle?.addEventListener('click', () => {
+            const nextTheme = document.documentElement.classList.contains('theme-dark') ? 'light' : 'dark';
+            localStorage.setItem('portfolio-theme', nextTheme);
+            applyTheme(nextTheme);
+        });
+
+        function initTimelineAnimation() {
+            document.documentElement.classList.add('cssanimations');
+            const timelineBlocks = document.querySelectorAll('.cd-timeline-block');
+            if (!timelineBlocks.length) {
+                return;
+            }
+
+            function hideOffscreenBlocks() {
+                timelineBlocks.forEach((block) => {
+                    const marker = block.querySelector('.cd-timeline-img');
+                    const content = block.querySelector('.cd-timeline-content');
+                    if (!marker || !content) {
+                        return;
+                    }
+
+                    const blockTop = block.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (blockTop > windowHeight * 0.75 && !marker.classList.contains('bounce-in')) {
+                        marker.classList.add('is-hidden');
+                        content.classList.add('is-hidden');
+                    }
+                });
+            }
+
+            function revealBlocksOnScroll() {
+                timelineBlocks.forEach((block) => {
+                    const marker = block.querySelector('.cd-timeline-img');
+                    const content = block.querySelector('.cd-timeline-content');
+                    if (!marker || !content) {
+                        return;
+                    }
+
+                    const blockTop = block.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (blockTop <= windowHeight * 0.75 && marker.classList.contains('is-hidden')) {
+                        marker.classList.remove('is-hidden');
+                        marker.classList.add('bounce-in');
+                        content.classList.remove('is-hidden');
+                        content.classList.add('bounce-in');
+                    }
+                });
+            }
+
+            hideOffscreenBlocks();
+            revealBlocksOnScroll();
+            window.addEventListener('scroll', revealBlocksOnScroll);
+            window.addEventListener('resize', hideOffscreenBlocks);
+        }
+
+        initTimelineAnimation();
+
         const galleryTriggers = Array.from(document.querySelectorAll('.gallery-trigger'));
         const projectGalleryItems = {
             aee: [
