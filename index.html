@@ -1,396 +1,271 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="theme-dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marley - Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@600;700&family=Raleway:wght@600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-    <header class="hero-section">
-        <div class="theme-toggle-wrapper">
-            <button class="github-button github-button-secondary theme-toggle" type="button" id="theme-toggle" aria-label="Alternar modo escuro" aria-pressed="false">
-                <i class="fas fa-moon" aria-hidden="true"></i>
-                <span>Modo escuro</span>
-            </button>
+<nav class="top-navbar" aria-label="Navegação principal">
+    <div class="top-navbar-content">
+        <a href="#" class="top-navbar-brand">Portfolio</a>
+        <button class="top-navbar-toggle" type="button" id="top-navbar-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="top-navbar-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="top-navbar-links" id="top-navbar-links">
+            <a href="#" class="top-navbar-link top-navbar-link-mobile-brand">Portfolio</a>
+            <a href="#tecnologias" class="top-navbar-link">Tecnologias</a>
+            <a href="#projetos" class="top-navbar-link">Ver projetos</a>
+            <a href="#experiencias" class="top-navbar-link">Experiências</a>
+            <a href="#contact-title" class="top-navbar-link">Contato</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="profile-container">
+        <div class="hero-profile-card">
+            <div class="profile-image-wrapper">
+                <img class="profile-image" src="./assets/img/marley.png" alt="Foto de Marley Teixeira">
+            </div>
+
+            <div class="hero-copy">
+                <h1>Marley Teixeira Meira</h1>
+                <span class="hero-kicker">Desenvolvedor Full Stack</span>
+            </div>
         </div>
 
-        <div class="profile-container">
-            <div class="hero-profile-card">
-                <div class="profile-image-wrapper">
-                    <div class="profile-image" style="background-image: url('./assets/img/marley.jpeg');">
-                    </div>
-                </div>
+        <div class="intro-code" aria-label="Apresentação em formato de código PHP">
+                <pre><code class="language-php"><span class="keyword">&lt;?php</span>
 
-                <div class="hero-copy">
-                    <h2>Marley Teixeira Meira</h2>
-                    <span class="hero-kicker">Desenvolvedor Full Stack</span>
-                    <div class="hero-actions">
-                        <a href="#projetos" class="github-button">Ver projetos</a>
-                        <a href="#experiencias" class="github-button github-button-secondary">Experiências</a>
-                        <a href="https://github.com/Mxrlrey" target="_blank" rel="noopener noreferrer" class="github-button github-button-secondary">GitHub</a>
-                    </div>
-                </div>
-            </div>
+<span class="keyword">echo</span> <span class="string-literal">"Olá, meu nome é Marley. Sou formado em Análise e Desenvolvimento de Sistemas pelo IF Baiano - Campus Guanambi e atuo como desenvolvedor full stack, com foco em backend. Já participei do desenvolvimento de sistemas voltados para saúde, acessibilidade, gestão financeira e automação de processos."</span>;</code></pre>
+        </div>
+    </div>
+</header>
 
-            <div class="intro-code" aria-label="Apresentação em formato de código Java">
-                <pre><code class="language-java"><span class="keyword">public class</span> <span class="classname">Main</span> {
-    <span class="keyword">public static void</span> <span class="method">main</span>(<span class="datatype">String</span>[] args) {
-        <span class="system-call">System.out.println</span>(<span class="string-literal">"Olá, meu nome é Marley. Sou formado em Análise e Desenvolvimento de Sistemas pelo IF Baiano - Campus Guanambi e atuo como desenvolvedor full stack, com foco em backend. Já participei do desenvolvimento de sistemas voltados para saúde, acessibilidade, gestão financeira e automação de processos."</span>);
-    }
-}</code></pre>
-            </div>
+<section class="tech-section" id="tecnologias" aria-labelledby="tech-title">
+    <div class="tech-section-inner">
+        <h2 class="section-title" id="tech-title">Minhas Tecnologias</h2>
+        <div class="tech-category-tabs" role="tablist" aria-label="Categorias de tecnologias">
+            <button class="tech-category-tab is-active" id="languages-tab" type="button" role="tab" aria-selected="true" aria-controls="languages-panel" data-tech-category="languages">Linguagens</button>
+            <button class="tech-category-tab" id="frameworks-tab" type="button" role="tab" aria-selected="false" aria-controls="frameworks-panel" data-tech-category="frameworks" tabindex="-1">Frameworks e bibliotecas</button>
+            <button class="tech-category-tab" id="databases-tab" type="button" role="tab" aria-selected="false" aria-controls="databases-panel" data-tech-category="databases" tabindex="-1">Bancos de dados</button>
+            <button class="tech-category-tab" id="tools-tab" type="button" role="tab" aria-selected="false" aria-controls="tools-panel" data-tech-category="tools" tabindex="-1">Ferramentas</button>
+        </div>
+        <div class="tech-stack-groups">
+            <section class="tech-group is-active" id="languages-panel" role="tabpanel" aria-labelledby="languages-tab" data-tech-panel="languages">
+                <h3 id="languages-title">Linguagens</h3>
+                <ul class="tech-stack-line">
+                    <li class="tech-card"><i class="fab fa-php tech-icon" aria-hidden="true"></i><span>PHP</span></li>
+                    <li class="tech-card"><i class="fab fa-python tech-icon" aria-hidden="true"></i><span>Python</span></li>
+                    <li class="tech-card"><i class="fab fa-java tech-icon" aria-hidden="true"></i><span>Java</span></li>
+                    <li class="tech-card"><i class="fab fa-js-square tech-icon" aria-hidden="true"></i><span>JavaScript</span></li>
+                    <li class="tech-card"><i class="devicon-typescript-plain tech-icon" aria-hidden="true"></i><span>TypeScript</span></li>
+                </ul>
+            </section>
 
-            <section class="tech-section" aria-labelledby="tech-title">
-                <h2 class="section-title" id="tech-title">Minhas Tecnologias</h2>
-                <div class="tech-stack-line">
-                    <div class="tech-card">
-                        <i class="fab fa-php tech-icon" aria-hidden="true"></i>
-                        <span>PHP</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-python tech-icon" aria-hidden="true"></i>
-                        <span>Python</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-java tech-icon" aria-hidden="true"></i>
-                        <span>Java</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fas fa-angle-double-right tech-icon" aria-hidden="true"></i>
-                        <span>Inertia.js</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-laravel tech-icon" aria-hidden="true"></i>
-                        <span>Laravel</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="devicon-django-plain tech-icon" aria-hidden="true"></i>
-                        <span>Django</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-docker tech-icon" aria-hidden="true"></i>
-                        <span>Docker</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="devicon-mysql-plain tech-icon" aria-hidden="true"></i>
-                        <span>MySQL</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="devicon-postgresql-plain tech-icon" aria-hidden="true"></i>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="devicon-git-plain tech-icon" aria-hidden="true"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-github tech-icon" aria-hidden="true"></i>
-                        <span>GitHub</span>
-                    </div>
-                </div>
+            <section class="tech-group" id="frameworks-panel" role="tabpanel" aria-labelledby="frameworks-tab" data-tech-panel="frameworks" hidden>
+                <h3 id="frameworks-title">Frameworks e bibliotecas</h3>
+                <ul class="tech-stack-line">
+                    <li class="tech-card"><i class="fab fa-laravel tech-icon" aria-hidden="true"></i><span>Laravel</span></li>
+                    <li class="tech-card"><i class="devicon-django-plain tech-icon" aria-hidden="true"></i><span>Django</span></li>
+                    <li class="tech-card"><i class="fab fa-react tech-icon" aria-hidden="true"></i><span>React</span></li>
+                    <li class="tech-card"><i class="fas fa-angle-double-right tech-icon" aria-hidden="true"></i><span>Inertia.js</span></li>
+                </ul>
+            </section>
+
+            <section class="tech-group" id="databases-panel" role="tabpanel" aria-labelledby="databases-tab" data-tech-panel="databases" hidden>
+                <h3 id="databases-title">Bancos de dados</h3>
+                <ul class="tech-stack-line">
+                    <li class="tech-card"><i class="devicon-mysql-plain tech-icon" aria-hidden="true"></i><span>MySQL</span></li>
+                    <li class="tech-card"><i class="devicon-postgresql-plain tech-icon" aria-hidden="true"></i><span>PostgreSQL</span></li>
+                </ul>
+            </section>
+
+            <section class="tech-group" id="tools-panel" role="tabpanel" aria-labelledby="tools-tab" data-tech-panel="tools" hidden>
+                <h3 id="tools-title">Ferramentas</h3>
+                <ul class="tech-stack-line">
+                    <li class="tech-card"><i class="fab fa-docker tech-icon" aria-hidden="true"></i><span>Docker</span></li>
+                    <li class="tech-card"><i class="devicon-git-plain tech-icon" aria-hidden="true"></i><span>Git</span></li>
+                    <li class="tech-card"><i class="fab fa-github tech-icon" aria-hidden="true"></i><span>GitHub</span></li>
+                </ul>
             </section>
         </div>
-    </header>
+    </div>
+</section>
 
-    <main class="projects-section" id="projetos">
+<main>
+    <section class="projects-section" id="projetos" aria-labelledby="projects-title">
         <div class="projects-heading">
-            <h2 class="section-title">Meus Projetos</h2>
+            <h2 class="section-title" id="projects-title">Meus Projetos</h2>
             <p>Esta seção reúne projetos desenvolvidos em diferentes momentos da minha trajetória, desde estudos e iniciativas pessoais até sistemas utilizados em contextos reais.</p>
         </div>
 
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="Sirus"
-                     data-gallery-key="sirus"
-                     data-title="Dashboard"
-                     data-description="Painel principal com a visão geral operacional da plataforma."
-                     data-image="./assets/img/projects/sirus/dashboard.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria do Sirus">
-                    <img src="./assets/img/projects/sirus/dashboard.png" alt="Preview do dashboard do Sirus" loading="lazy">
-                </div>
-                <h3>Sirus - Sistema Integrado de Regulação e Urgência em Saúde</h3>
-                <p>O SIRUS é uma plataforma desenvolvida para o SAMU com o objetivo de substituir registros em papel por uma solução digital integrada, permitindo o acompanhamento do ciclo completo das ocorrências, incluindo despacho de unidades, controle operacional, geração de documentos, auditoria de ações e monitoramento de informações em tempo real.</p>
-                <div class="project-actions-row">
-                <button class="github-button gallery-trigger-button gallery-trigger"
-                        type="button"
-                        data-project="Sirus"
-                        data-gallery-key="sirus"
-                        data-title="Dashboard"
-                        data-description="Painel principal com a visão geral operacional da plataforma."
-                        data-image="./assets/img/projects/sirus/dashboard.png"
-                        title="Ver galeria"
-                        aria-label="Ver galeria do Sirus"><i class="fas fa-images" aria-hidden="true"></i></button>
-                <a href="https://sirus.app.br" target="_blank" class="github-button">Site</a>
-                </div>
-                <div class="card-tech-icons">
-                    <i class="fab fa-python tech-icon" title="Python"></i>
-                    <i class="devicon-django-plain tech-icon" title="Django"></i>
-                    <i class="fab fa-js-square tech-icon" title="JavaScript"></i>
-                    <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-                    <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-                    <i class="fab fa-docker tech-icon" title="Docker"></i>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="GNAI"
-                     data-gallery-key="gnai"
-                     data-title="Dashboard"
-                     data-description="Painel principal com indicadores e atalhos para a gestão do núcleo."
-                     data-image="./assets/img/projects/gnai/dashboard.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria do GNAI">
-                    <img src="./assets/img/projects/gnai/dashboard.png" alt="Preview do dashboard do GNAI" loading="lazy">
-                </div>
-                <h3>GNAI - Gestão dos Núcleos de Acessibilidade e Inclusão</h3>
-                <p>O GNAI é uma plataforma web desenvolvida para apoiar a gestão dos Núcleos de Acessibilidade e Inclusão (NAIs) de instituições de ensino. O sistema centraliza informações e processos relacionados ao acompanhamento de estudantes, gerenciamento de tecnologias assistivas, registro de atendimentos, contribuindo para a organização das atividades do núcleo e para a melhoria dos processos de inclusão. Após seu desenvolvimento, a plataforma foi validada no NAPNE do IF Baiano – Campus Guanambi, onde foi utilizada para avaliação.</p>
-                <div class="project-actions-row">
-                    <button class="github-button gallery-trigger-button gallery-trigger"
-                            type="button"
-                            data-project="GNAI"
-                            data-gallery-key="gnai"
-                            data-title="Dashboard"
-                            data-description="Painel principal com indicadores e atalhos para a gestão do núcleo."
-                            data-image="./assets/img/projects/gnai/dashboard.png"
-                            title="Ver galeria"
-                            aria-label="Ver galeria do GNAI"><i class="fas fa-images" aria-hidden="true"></i></button>
-                    <a href="https://web01.guanambi.ifbaiano.edu.br/" target="_blank" class="github-button">Site</a>
-                </div>
-                <div class="card-tech-icons">
-                    <i class="fab fa-php tech-icon" title="PHP"></i>
-                    <i class="fab fa-laravel tech-icon" title="Laravel"></i>
-                    <i class="fab fa-js-square tech-icon" title="JavaScript"></i>
-                    <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-                    <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-                    <i class="fab fa-docker tech-icon" title="Docker"></i>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="Sertão PDV"
-                     data-gallery-key="sertao-pdv"
-                     data-title="Frente de caixa"
-                     data-description="Tela principal de operação no ponto de venda."
-                     data-image="./assets/img/projects/controle-bar/frente-de-caixa.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria do Sertão PDV">
-                    <img src="./assets/img/projects/controle-bar/frente-de-caixa.png" alt="Preview da frente de caixa do Sertão PDV" loading="lazy">
-                </div>
-                <h3>Sertão PDV</h3>
-                <p>O Sertão PDV é uma plataforma de ponto de venda e gestão operacional voltada para bares e restaurantes, desenvolvida para auxiliar no gerenciamento de comandas, pedidos, pagamentos, fechamento de contas e controle financeiro.</p>
-                <div class="project-actions-row">
-                <button class="github-button gallery-trigger-button gallery-trigger"
-                        type="button"
-                        data-project="Sertão PDV"
-                        data-gallery-key="sertao-pdv"
-                        data-title="Frente de caixa"
-                        data-description="Tela principal de operação no ponto de venda."
-                        data-image="./assets/img/projects/controle-bar/frente-de-caixa.png"
-                        title="Ver galeria"
-                        aria-label="Ver galeria do Sertão PDV"><i class="fas fa-images" aria-hidden="true"></i></button>
-                <a href="https://principio.sertaosis.com/" target="_blank" class="github-button">Site</a>
-                </div>
-                <div class="card-tech-icons">
-                    <i class="fab fa-php tech-icon" title="PHP"></i>
-                    <i class="fab fa-laravel tech-icon" title="Laravel"></i>
-                    <i class="fas fa-angle-double-right tech-icon" title="Inertia.js"></i>
-                    <i class="fab fa-docker tech-icon" title="Docker"></i>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="Radar Inclusivo"
-                     data-gallery-key="radar-inclusivo"
-                     data-title="Dashboard"
-                     data-description="Painel principal com a visão geral dos recursos e demandas."
-                     data-image="./assets/img/projects/radar-inclusivo/dashboard.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria do Radar Inclusivo">
-                    <img src="./assets/img/projects/radar-inclusivo/dashboard.png" alt="Preview do dashboard do Radar Inclusivo" loading="lazy">
-                </div>
-                <h3>Radar Inclusivo</h3>
-                <p>O Radar Inclusivo é uma plataforma web criada para auxiliar os Núcleos de Acessibilidade e Inclusão (NAIs) na gestão dos recursos de acessibilidade e no acompanhamento das demandas institucionais, centralizando informações sobre tecnologias assistivas, materiais pedagógicos acessíveis, barreiras de acessibilidade e demais atividades do núcleo.</p>
+        <div class="projects-list">
+            <article class="project-feature" data-gallery-key="sirus">
+                <div class="project-copy">
+                    <h3>Sirus <small>Sistema Integrado de Regulação e Urgência em Saúde</small></h3>
+                    <p>O SIRUS é uma plataforma de regulação médica desenvolvida para apoiar as operações do SAMU, centralizando e digitalizando os processos de atendimento de urgência e emergência.</p>
+                    <div class="project-contributions">
+                        <strong>Contribuições</strong>
+                        <ul>
+                            <li>Sistema de auditoria e rastreabilidade das ações dos usuários.</li>
+                            <li>Controle de permissões e gerenciamento de colaboradores.</li>
+                            <li>Geração e gerenciamento de documentos com assinaturas digitais.</li>
+                            <li>Modelagem e evolução do banco de dados.</li>
+                            <li>Desenvolvimento de APIs, interfaces administrativas e integrações entre front-end e back-end.</li>
+                            <li>Correção de bugs, refatorações e melhorias de desempenho, segurança e estabilidade.</li>
+                        </ul>
+                    </div>
+                    <div class="project-impact" aria-label="Resultados do projeto SIRUS">
+                        <div class="impact-badge">
+                            <strong>8.324</strong>
+                            <span>Atendimentos registrados</span>
+                        </div>
+                        <div class="impact-badge">
+                            <strong>23</strong>
+                            <span>Municípios atendidos</span>
+                        </div>
+                    </div>
                     <div class="project-actions-row">
-                    <button class="github-button gallery-trigger-button gallery-trigger"
-                            type="button"
-                            data-project="Radar Inclusivo"
-                            data-gallery-key="radar-inclusivo"
-                            data-title="Dashboard"
-                            data-description="Painel principal com a visão geral dos recursos e demandas."
-                            data-image="./assets/img/projects/radar-inclusivo/dashboard.png"
-                            title="Ver galeria"
-                            aria-label="Ver galeria do Radar Inclusivo"><i class="fas fa-images" aria-hidden="true"></i></button>
-                    <a href="https://github.com/Mxrlrey/radar-inclusivo" target="_blank" class="github-button">GitHub</a>
+                        <a href="https://sirus.app.br" target="_blank" rel="noopener noreferrer" class="github-button">Visitar site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
-                    <div class="card-tech-icons">
-                        <i class="fab fa-php tech-icon" title="PHP"></i>
-                        <i class="fab fa-laravel tech-icon" title="Laravel"></i>
-                        <i class="fab fa-js-square tech-icon" title="JavaScript"></i>
-                        <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-                        <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-                        <i class="fab fa-docker tech-icon" title="Docker"></i>
-                    </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="Joystick Juice"
-                     data-gallery-key="joystick-juice"
-                     data-title="Listagem de jogos"
-                     data-description="Tela de listagem dos jogos cadastrados na plataforma."
-                     data-image="./assets/img/projects/joystick-juice/listagem-jogos.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria do Joystick Juice">
-                    <img src="./assets/img/projects/joystick-juice/listagem-jogos.png" alt="Preview da listagem de jogos do Joystick Juice" loading="lazy">
+                    <ul class="card-tech-icons" aria-label="Tecnologias utilizadas no SIRUS">
+                        <li class="tech-label">Python</li>
+                        <li class="tech-label">Django</li>
+                        <li class="tech-label">JavaScript</li>
+                        <li class="tech-label">Bootstrap</li>
+                        <li class="tech-label">PostgreSQL</li>
+                        <li class="tech-label">Docker</li>
+                    </ul>
                 </div>
-                <h3>Joystick Juice</h3>
-                <p>O Joystick Juice é uma plataforma web desenvolvida como parte das atividades avaliativas das disciplinas Programação para Web I e Programação para Web II. O projeto tem como objetivo oferecer um ambiente colaborativo para jogadores registrarem, organizarem e compartilharem suas experiências com jogos digitais.</p>
-                    <div class="project-actions-row">
-                    <button class="github-button gallery-trigger-button gallery-trigger"
-                            type="button"
-                            data-project="Joystick Juice"
-                            data-gallery-key="joystick-juice"
-                            data-title="Listagem de jogos"
-                            data-description="Tela de listagem dos jogos cadastrados na plataforma."
-                            data-image="./assets/img/projects/joystick-juice/listagem-jogos.png"
-                            title="Ver galeria"
-                            aria-label="Ver galeria do Joystick Juice"><i class="fas fa-images" aria-hidden="true"></i></button>
-                    <a href="https://github.com/Mxrlrey/Joystick_Juice" target="_blank" class="github-button">GitHub</a>
-                    </div>
-                    <div class="card-tech-icons">
-                        <i class="fab fa-python tech-icon" title="Python"></i>
-                        <i class="devicon-django-plain tech-icon" title="Django"></i>
-                        <i class="fab fa-js-square tech-icon" title="JavaScript"></i>
-                        <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-                        <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-                        <i class="fab fa-docker tech-icon" title="Docker"></i>
-                    </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="Landing Page Mundo Digital"
-                     data-gallery-key="mundo-digital"
-                     data-title="Serviços"
-                     data-description="Seção de serviços da landing page."
-                     data-image="./assets/img/projects/mundo-digital/servicos.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria da Landing Page Mundo Digital">
-                    <img src="./assets/img/projects/mundo-digital/servicos.png" alt="Preview da seção de serviços da Landing Page Mundo Digital" loading="lazy">
+                <div class="project-gallery-hover-area">
+                    <figure class="project-gallery" aria-label="Galeria do projeto Sirus">
+                        <img class="project-gallery-image" src="./assets/img/projects/sirus/dashboard.png" alt="Dashboard — Painel principal com a visão geral operacional da plataforma." loading="lazy">
+                        <button class="project-gallery-nav project-gallery-prev" type="button" aria-label="Imagem anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                        <button class="project-gallery-nav project-gallery-next" type="button" aria-label="Próxima imagem"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                        <figcaption class="project-gallery-caption"><strong>Dashboard</strong><span>Painel principal com a visão geral operacional da plataforma.</span><small>1 / 4</small></figcaption>
+                    </figure>
                 </div>
-                <h3>Landing Page Mundo Digital</h3>
-                <p>Site desenvolvido como atividade avaliativa da disciplina de Estágio Supervisionado I do curso de Análise e Desenvolvimento de Sistemas. O projeto consistiu na criação de uma landing page institucional para divulgação dos serviços da empresa, incluindo manutenção de computadores e notebooks, suporte técnico e informações de contato.</p>
-                    <div class="project-actions-row">
-                    <button class="github-button gallery-trigger-button gallery-trigger"
-                            type="button"
-                            data-project="Landing Page Mundo Digital"
-                            data-gallery-key="mundo-digital"
-                            data-title="Serviços"
-                            data-description="Seção de serviços da landing page."
-                            data-image="./assets/img/projects/mundo-digital/servicos.png"
-                            title="Ver galeria"
-                            aria-label="Ver galeria da Landing Page Mundo Digital"><i class="fas fa-images" aria-hidden="true"></i></button>
-                    <a href="https://mundodigital.website/" target="_blank" class="github-button">Site</a>
-                    </div>
-                    <div class="card-tech-icons">
-                        <i class="fab fa-js-square tech-icon" title="JavaScript"></i>
-                        <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-                        <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-                    </div>
-            </div>
+            </article>
 
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="Sistema de Gestão AEE"
-                     data-gallery-key="aee"
-                     data-title="Cadastro de aluno"
-                     data-description="Tela de cadastro de aluno dentro do fluxo do sistema."
-                     data-image="./assets/img/projects/aee/cadastro-aluno.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria do Sistema de Gestão AEE">
-                    <img src="./assets/img/projects/aee/cadastro-aluno.png" alt="Preview do cadastro de aluno do Sistema de Gestão AEE" loading="lazy">
-                </div>
-                <h3>Sistema de Gestão AEE</h3>
-                <p>Trabalho desenvolvido para avaliação parcial da disciplina LPOO. A plataforma permite que educadores e gestores escolares planejem, acompanhem e documentem todo o processo de AEE de forma simples e eficiente.</p>
+            <article class="project-feature" data-gallery-key="gnai">
+                <div class="project-copy">
+                    <h3>GNAI <small>Gestão dos Núcleos de Acessibilidade e Inclusão</small></h3>
+                    <p>O GNAI é uma plataforma de gestão desenvolvida para apoiar os Núcleos de Acessibilidade e Inclusão, centralizando informações, atendimentos, recursos, documentos e indicadores relacionados à inclusão institucional.</p>
+                    <div class="project-contributions">
+                        <strong>Contribuições</strong>
+                        <ul>
+                            <li>Desenvolvimento de módulos para tecnologias assistivas, materiais pedagógicos acessíveis, empréstimos, filas de atendimento e barreiras de acessibilidade.</li>
+                            <li>Implementação de dashboards, relatórios, notificações, geolocalização, permissões, auditoria e rastreabilidade.</li>
+                            <li>Aplicação das diretrizes WCAG 2.2 AA, eMAG e dos princípios de privacidade e segurança da LGPD.</li>
+                            <li>Modelagem do banco de dados, implementação de regras de negócio e manutenção da aplicação.</li>
+                        </ul>
+                    </div>
                     <div class="project-actions-row">
-                    <button class="github-button gallery-trigger-button gallery-trigger"
-                            type="button"
-                            data-project="Sistema de Gestão AEE"
-                            data-gallery-key="aee"
-                            data-title="Cadastro de aluno"
-                            data-description="Tela de cadastro de aluno dentro do fluxo do sistema."
-                            data-image="./assets/img/projects/aee/cadastro-aluno.png"
-                            title="Ver galeria"
-                            aria-label="Ver galeria do Sistema de Gestão AEE"><i class="fas fa-images" aria-hidden="true"></i></button>
-                    <a href="https://github.com/Mxrlrey/Sistema-de-Gestao-do-Atendimento-Educacional-Especializado-" target="_blank" class="github-button">GitHub</a>
+                        <a href="https://web01.guanambi.ifbaiano.edu.br/" target="_blank" rel="noopener noreferrer" class="github-button">Visitar site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
-                    <div class="card-tech-icons">
-                        <i class="fab fa-java tech-icon" title="Java"></i>
-                        <i class="fab fa-js-square tech-icon" title="JavaScript"></i>
-                        <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-                        <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-                        <i class="fab fa-docker tech-icon" title="Docker"></i>
-                    </div>
-            </div>
+                    <ul class="card-tech-icons" aria-label="Tecnologias utilizadas no GNAI">
+                        <li class="tech-label">PHP</li>
+                        <li class="tech-label">Laravel</li>
+                        <li class="tech-label">JavaScript</li>
+                        <li class="tech-label">HTML5</li>
+                        <li class="tech-label">CSS3</li>
+                        <li class="tech-label">MySQL</li>
+                        <li class="tech-label">Docker</li>
+                    </ul>
+                </div>
+                <div class="project-gallery-hover-area">
+                    <figure class="project-gallery" aria-label="Galeria do projeto GNAI">
+                        <img class="project-gallery-image" src="./assets/img/projects/gnai/dashboard.png" alt="Dashboard — Painel principal com indicadores e atalhos para a gestão do núcleo." loading="lazy">
+                        <button class="project-gallery-nav project-gallery-prev" type="button" aria-label="Imagem anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                        <button class="project-gallery-nav project-gallery-next" type="button" aria-label="Próxima imagem"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                        <figcaption class="project-gallery-caption"><strong>Dashboard</strong><span>Painel principal com indicadores e atalhos para a gestão do núcleo.</span><small>1 / 5</small></figcaption>
+                    </figure>
+                </div>
+            </article>
 
-            <div class="project-card">
-                <div class="project-image-placeholder gallery-trigger"
-                     data-project="CRUD de Usuários e Formulário de Suporte"
-                     data-gallery-key="club-fullstack"
-                     data-title="Listagem de usuários"
-                     data-description="Tela principal de consulta e gerenciamento dos usuários cadastrados."
-                     data-image="./assets/img/projects/club-fullstack/listagem-usuarios.png"
-                     role="button"
-                     tabindex="0"
-                     title="Ver galeria"
-                     aria-label="Ver galeria do projeto Clube Full-Stack">
-                    <img src="./assets/img/projects/club-fullstack/listagem-usuarios.png" alt="Preview da listagem de usuários do projeto Clube Full-Stack" loading="lazy">
-                </div>
-                <h3>CRUD de Usuários e Formulário de Suporte (Mailtrap)</h3>
-                <p>Projeto desenvolvido como parte dos estudos no curso Clube Full-Stack, ministrado por Alexandre Cardoso, com o objetivo de aprofundar os conhecimentos em PHP. A aplicação consiste em um sistema de gerenciamento de usuários com operações de cadastro, edição, listagem e remoção (CRUD), além de um formulário de suporte integrado ao envio de e-mails via SMTP para atendimento de solicitações dos usuários.</p>
+            <article class="project-feature" data-gallery-key="sertao-pdv">
+                <div class="project-copy">
+                    <h3>Sertão PDV <small>Ponto de venda e gestão operacional</small></h3>
+                    <p>O Sertão PDV é um sistema de ponto de venda para bares e restaurantes, desenvolvido para gerenciar comandas, mesas, produtos, pagamentos, caixa e movimentações financeiras em uma única plataforma.</p>
+                    <div class="project-contributions">
+                        <strong>Contribuições</strong>
+                        <ul>
+                            <li>Implementação das regras de negócio para caixa e pagamentos.</li>
+                            <li>Abertura, movimentação e fechamento de caixa, incluindo sangrias, suprimentos e conciliação financeira.</li>
+                            <li>Integração de múltiplos métodos de pagamento e APIs para processamento e cancelamento.</li>
+                            <li>Modelagem do banco de dados e implementação de validações transacionais.</li>
+                            <li>Auditoria, histórico financeiro e geração de relatórios em PDF.</li>
+                            <li>Desenvolvimento de interfaces administrativas com React e Inertia.</li>
+                        </ul>
+                    </div>
+                    <div class="project-impact" aria-label="Resultados do projeto Sertão PDV">
+                        <div class="impact-badge">
+                            <strong>≈ 75%</strong>
+                            <span>Redução no tempo de abertura e fechamento de comandas</span>
+                        </div>
+                    </div>
                     <div class="project-actions-row">
-                    <button class="github-button gallery-trigger-button gallery-trigger"
-                            type="button"
-                            data-project="CRUD de Usuários e Formulário de Suporte"
-                            data-gallery-key="club-fullstack"
-                            data-title="Listagem de usuários"
-                            data-description="Tela principal de consulta e gerenciamento dos usuários cadastrados."
-                            data-image="./assets/img/projects/club-fullstack/listagem-usuarios.png"
-                            title="Ver galeria"
-                            aria-label="Ver galeria do projeto Clube Full-Stack"><i class="fas fa-images" aria-hidden="true"></i></button>
-                    <a href="https://github.com/Mxrlrey/clube-fullstack-projetos" target="_blank" class="github-button">GitHub</a>
+                        <a href="https://principio.sertaosis.com/" target="_blank" rel="noopener noreferrer" class="github-button">Visitar site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
-                    <div class="card-tech-icons">
-                        <i class="fab fa-php tech-icon" title="PHP"></i>
-                        <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-                        <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-                        <i class="fab fa-docker tech-icon" title="Docker"></i>
+                    <ul class="card-tech-icons" aria-label="Tecnologias utilizadas no Sertão PDV">
+                        <li class="tech-label">PHP</li>
+                        <li class="tech-label">Laravel</li>
+                        <li class="tech-label">React</li>
+                        <li class="tech-label">Inertia.js</li>
+                        <li class="tech-label">Docker</li>
+                    </ul>
+                </div>
+                <div class="project-gallery-hover-area">
+                    <figure class="project-gallery" aria-label="Galeria do projeto Sertão PDV">
+                        <img class="project-gallery-image" src="./assets/img/projects/controle-bar/frente-de-caixa.png" alt="Frente de caixa — Tela principal de operação no ponto de venda." loading="lazy">
+                        <button class="project-gallery-nav project-gallery-prev" type="button" aria-label="Imagem anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                        <button class="project-gallery-nav project-gallery-next" type="button" aria-label="Próxima imagem"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                        <figcaption class="project-gallery-caption"><strong>Frente de caixa</strong><span>Tela principal de operação no ponto de venda.</span><small>1 / 4</small></figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="project-feature" data-gallery-key="mundo-digital">
+                <div class="project-copy">
+                    <h3>Landing Page Mundo Digital <small>Presença institucional e serviços</small></h3>
+                    <p>Landing page institucional criada para apresentar a empresa, divulgar seus serviços de manutenção e suporte técnico e facilitar o acesso às informações de contato.</p>
+                    <div class="project-contributions">
+                        <strong>Contribuições</strong>
+                        <ul>
+                            <li>Desenvolvimento da landing page institucional para divulgação dos serviços da empresa.</li>
+                            <li>Implementação de interfaces responsivas utilizando HTML, CSS e JavaScript.</li>
+                        </ul>
                     </div>
-            </div>
+                    <div class="project-actions-row">
+                        <a href="https://mundodigital.website/" target="_blank" rel="noopener noreferrer" class="github-button">Visitar site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                    <ul class="card-tech-icons" aria-label="Tecnologias utilizadas na Landing Page Mundo Digital">
+                        <li class="tech-label">JavaScript</li>
+                        <li class="tech-label">HTML5</li>
+                        <li class="tech-label">CSS3</li>
+                    </ul>
+                </div>
+                <div class="project-gallery-hover-area">
+                    <figure class="project-gallery" aria-label="Galeria do projeto Landing Page Mundo Digital">
+                        <img class="project-gallery-image" src="./assets/img/projects/mundo-digital/servicos.png" alt="Serviços — Seção de serviços da landing page." loading="lazy">
+                        <button class="project-gallery-nav project-gallery-prev" type="button" aria-label="Imagem anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                        <button class="project-gallery-nav project-gallery-next" type="button" aria-label="Próxima imagem"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                        <figcaption class="project-gallery-caption"><strong>Serviços</strong><span>Seção de serviços da landing page.</span><small>1 / 2</small></figcaption>
+                    </figure>
+                </div>
+            </article>
         </div>
-    </main>
+    </section>
 
     <section class="experience-section" id="experiencias" aria-labelledby="experiences-title">
         <div class="projects-heading experience-heading">
@@ -413,9 +288,9 @@
                                 <p class="experience-company">Projeto SIRUS</p>
                             </div>
                             <span class="cd-date">
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                Outubro de 2025 - Atualmente · 10 meses
-                            </span>
+                                    <i class="far fa-clock" aria-hidden="true"></i>
+                                    Outubro de 2025 - Atualmente · 10 meses
+                                </span>
                         </div>
 
                         <div class="experience-meta">
@@ -435,7 +310,12 @@
                         </div>
 
                         <div class="experience-footer">
-                            <small>Django · PostgreSQL · JavaScript · Docker</small>
+                            <ul class="experience-tech-list" aria-label="Tecnologias utilizadas no projeto SIRUS">
+                                <li>Django</li>
+                                <li>PostgreSQL</li>
+                                <li>JavaScript</li>
+                                <li>Docker</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
@@ -453,9 +333,9 @@
                                 <p class="experience-company">VISDOM Tecnologia da Informação</p>
                             </div>
                             <span class="cd-date">
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                Fevereiro de 2026 - Maio de 2026 · 4 meses
-                            </span>
+                                    <i class="far fa-clock" aria-hidden="true"></i>
+                                    Fevereiro de 2026 - Maio de 2026 · 4 meses
+                                </span>
                         </div>
 
                         <div class="experience-meta">
@@ -475,7 +355,15 @@
                         </div>
 
                         <div class="experience-footer">
-                            <small>PHP · HTML · CSS · JavaScript · jQuery · AJAX · MySQL</small>
+                            <ul class="experience-tech-list" aria-label="Tecnologias utilizadas na VISDOM">
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>AJAX</li>
+                                <li>MySQL</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
@@ -493,9 +381,9 @@
                                 <p class="experience-company">Mundo Digital Tecnologia Serviços de Informática Ltda</p>
                             </div>
                             <span class="cd-date">
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                Agosto de 2025 - Novembro de 2025 · 4 meses
-                            </span>
+                                    <i class="far fa-clock" aria-hidden="true"></i>
+                                    Agosto de 2025 - Novembro de 2025 · 4 meses
+                                </span>
                         </div>
 
                         <div class="experience-meta">
@@ -515,7 +403,12 @@
                         </div>
 
                         <div class="experience-footer">
-                            <small>HTML · CSS · JavaScript · Suporte técnico</small>
+                            <ul class="experience-tech-list" aria-label="Tecnologias utilizadas na Mundo Digital">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Suporte técnico</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
@@ -523,372 +416,328 @@
         </div>
     </section>
 
-    <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
-        <div class="gallery-modal-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
-            <button class="gallery-modal-close" type="button" id="gallery-modal-close" aria-label="Fechar galeria">
-                <i class="fas fa-times" aria-hidden="true"></i>
-            </button>
-            <button class="gallery-modal-nav gallery-modal-prev" type="button" id="gallery-modal-prev" aria-label="Imagem anterior">
-                <i class="fas fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <button class="gallery-modal-nav gallery-modal-next" type="button" id="gallery-modal-next" aria-label="Próxima imagem">
-                <i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </button>
-            <a href="" target="_blank" rel="noopener noreferrer" id="gallery-modal-image-link" aria-label="Abrir imagem em outra aba">
-                <img src="" alt="" class="gallery-modal-image" id="gallery-modal-image">
-            </a>
-            <div class="gallery-modal-content">
-                <div class="gallery-modal-project" id="gallery-modal-project"></div>
-                <div class="gallery-modal-title" id="gallery-modal-title"></div>
-                <p class="gallery-modal-description" id="gallery-modal-description"></p>
-            </div>
+    <section class="contact-section" aria-labelledby="contact-title">
+        <span class="contact-kicker">Contato</span>
+        <h2 class="section-title" id="contact-title">Vamos conversar?</h2>
+        <p>Gosto de conhecer novos projetos, trocar experiências e explorar oportunidades na área de tecnologia.</p>
+        <a href="mailto:mxrlrey@gmail.com" class="github-button contact-primary-action">Enviar um e-mail</a>
+        <div class="contact-actions">
+            <a href="https://linkedin.com/in/marley-teixeira/" target="_blank" rel="noopener noreferrer" class="github-button">LinkedIn</a>
+            <a href="https://github.com/Mxrlrey" target="_blank" rel="noopener noreferrer" class="github-button github-button-secondary">GitHub</a>
+            <a href="./assets/docs/curriculo/curriculo-marley.pdf" download="curriculo-marley.pdf" class="github-button github-button-secondary">Baixar currículo</a>
         </div>
+        <address class="contact-meta">
+            <a href="mailto:mxrlrey@gmail.com">mxrlrey@gmail.com</a>
+        </address>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 Marley Teixeira Meira</p>
+</footer>
+
+<div class="image-viewer" id="image-viewer" aria-hidden="true">
+    <div class="image-viewer-content" role="dialog" aria-modal="true" aria-label="Visualização ampliada da imagem">
+        <img class="image-viewer-image" id="image-viewer-image" src="" alt="">
+        <p>Clique fora para fechar a imagem</p>
     </div>
+</div>
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const storedTheme = localStorage.getItem('portfolio-theme');
-        const initialTheme = storedTheme || 'dark';
+<script>
+    const navbarToggle = document.getElementById('top-navbar-toggle');
+    const navbarLinks = document.getElementById('top-navbar-links');
 
-        function applyTheme(theme) {
-            const isDark = theme === 'dark';
-            document.documentElement.classList.toggle('theme-dark', isDark);
-            themeToggle?.setAttribute('aria-pressed', String(isDark));
+    navbarToggle?.addEventListener('click', () => {
+        const isOpen = navbarLinks?.classList.toggle('is-open');
+        navbarToggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+    });
 
-            if (themeToggle) {
-                const icon = themeToggle.querySelector('i');
-                const label = themeToggle.querySelector('span');
-                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-                label.textContent = isDark ? 'Modo claro' : 'Modo escuro';
+    navbarLinks?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navbarLinks.classList.remove('is-open');
+            navbarToggle?.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    const techCategoryTabs = Array.from(document.querySelectorAll('.tech-category-tab'));
+    const techCategoryPanels = Array.from(document.querySelectorAll('.tech-group[data-tech-panel]'));
+
+    function selectTechCategory(category, moveFocus = false) {
+        techCategoryTabs.forEach((tab) => {
+            const isSelected = tab.dataset.techCategory === category;
+            tab.classList.toggle('is-active', isSelected);
+            tab.setAttribute('aria-selected', String(isSelected));
+            tab.tabIndex = isSelected ? 0 : -1;
+
+            if (isSelected && moveFocus) {
+                tab.focus();
             }
-        }
-
-        applyTheme(initialTheme);
-
-        themeToggle?.addEventListener('click', () => {
-            const nextTheme = document.documentElement.classList.contains('theme-dark') ? 'light' : 'dark';
-            localStorage.setItem('portfolio-theme', nextTheme);
-            applyTheme(nextTheme);
         });
 
-        function initTimelineAnimation() {
-            document.documentElement.classList.add('cssanimations');
-            const timelineBlocks = document.querySelectorAll('.cd-timeline-block');
-            if (!timelineBlocks.length) {
-                return;
+        techCategoryPanels.forEach((panel) => {
+            const isSelected = panel.dataset.techPanel === category;
+            panel.classList.toggle('is-active', isSelected);
+            panel.hidden = !isSelected;
+        });
+    }
+
+    techCategoryTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectTechCategory(tab.dataset.techCategory));
+        tab.addEventListener('keydown', (event) => {
+            let targetIndex = index;
+
+            if (event.key === 'ArrowRight') targetIndex = (index + 1) % techCategoryTabs.length;
+            if (event.key === 'ArrowLeft') targetIndex = (index - 1 + techCategoryTabs.length) % techCategoryTabs.length;
+            if (event.key === 'Home') targetIndex = 0;
+            if (event.key === 'End') targetIndex = techCategoryTabs.length - 1;
+
+            if (targetIndex !== index) {
+                event.preventDefault();
+                selectTechCategory(techCategoryTabs[targetIndex].dataset.techCategory, true);
             }
+        });
+    });
 
-            function hideOffscreenBlocks() {
-                timelineBlocks.forEach((block) => {
-                    const marker = block.querySelector('.cd-timeline-img');
-                    const content = block.querySelector('.cd-timeline-content');
-                    if (!marker || !content) {
-                        return;
-                    }
-
-                    const blockTop = block.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-
-                    if (blockTop > windowHeight * 0.75 && !marker.classList.contains('bounce-in')) {
-                        marker.classList.add('is-hidden');
-                        content.classList.add('is-hidden');
-                    }
-                });
-            }
-
-            function revealBlocksOnScroll() {
-                timelineBlocks.forEach((block) => {
-                    const marker = block.querySelector('.cd-timeline-img');
-                    const content = block.querySelector('.cd-timeline-content');
-                    if (!marker || !content) {
-                        return;
-                    }
-
-                    const blockTop = block.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-
-                    if (blockTop <= windowHeight * 0.75 && marker.classList.contains('is-hidden')) {
-                        marker.classList.remove('is-hidden');
-                        marker.classList.add('bounce-in');
-                        content.classList.remove('is-hidden');
-                        content.classList.add('bounce-in');
-                    }
-                });
-            }
-
-            hideOffscreenBlocks();
-            revealBlocksOnScroll();
-            window.addEventListener('scroll', revealBlocksOnScroll);
-            window.addEventListener('resize', hideOffscreenBlocks);
+    function initTimelineAnimation() {
+        document.documentElement.classList.add('cssanimations');
+        const timelineBlocks = document.querySelectorAll('.cd-timeline-block');
+        if (!timelineBlocks.length) {
+            return;
         }
 
-        initTimelineAnimation();
+        function hideOffscreenBlocks() {
+            timelineBlocks.forEach((block) => {
+                const marker = block.querySelector('.cd-timeline-img');
+                const content = block.querySelector('.cd-timeline-content');
+                if (!marker || !content) {
+                    return;
+                }
 
-        const galleryTriggers = Array.from(document.querySelectorAll('.gallery-trigger'));
-        const projectGalleryItems = {
-            aee: [
-                {
-                    project: 'Sistema de Gestão AEE',
-                    title: 'Cadastro de aluno',
-                    description: 'Tela de cadastro de aluno dentro do fluxo do sistema.',
-                    image: './assets/img/projects/aee/cadastro-aluno.png'
-                },
-                {
-                    project: 'Sistema de Gestão AEE',
-                    title: 'Detalhes do plano AEE',
-                    description: 'Tela com os detalhes do plano de atendimento educacional especializado.',
-                    image: './assets/img/projects/aee/detalhes-plano-aee.png'
-                },
-                {
-                    project: 'Sistema de Gestão AEE',
-                    title: 'Login',
-                    description: 'Tela de autenticação do sistema.',
-                    image: './assets/img/projects/aee/login.png'
-                }
-            ],
-            'mundo-digital': [
-                {
-                    project: 'Landing Page Mundo Digital',
-                    title: 'Serviços',
-                    description: 'Seção de serviços da landing page.',
-                    image: './assets/img/projects/mundo-digital/servicos.png'
-                },
-                {
-                    project: 'Landing Page Mundo Digital',
-                    title: 'Sobre nós',
-                    description: 'Bloco institucional com apresentação da empresa.',
-                    image: './assets/img/projects/mundo-digital/sobre-nos.png'
-                }
-            ],
-            'joystick-juice': [
-                {
-                    project: 'Joystick Juice',
-                    title: 'Listagem de jogos',
-                    description: 'Tela de listagem dos jogos cadastrados na plataforma.',
-                    image: './assets/img/projects/joystick-juice/listagem-jogos.png'
-                },
-                {
-                    project: 'Joystick Juice',
-                    title: 'Detalhe do jogo',
-                    description: 'Tela com os detalhes e informações de um jogo específico.',
-                    image: './assets/img/projects/joystick-juice/detalhe-do-jogo.png'
-                },
-                {
-                    project: 'Joystick Juice',
-                    title: 'Minha lista de jogos',
-                    description: 'Área com a coleção personalizada de jogos do usuário.',
-                    image: './assets/img/projects/joystick-juice/minha-lista-de-jogos.png'
-                },
-                {
-                    project: 'Joystick Juice',
-                    title: 'Login',
-                    description: 'Tela de autenticação da plataforma.',
-                    image: './assets/img/projects/joystick-juice/login.png'
-                }
-            ],
-            sirus: [
-                {
-                    project: 'Sirus',
-                    title: 'Dashboard',
-                    description: 'Painel principal com a visão geral operacional da plataforma.',
-                    image: './assets/img/projects/sirus/dashboard.png'
-                },
-                {
-                    project: 'Sirus',
-                    title: 'Chamado',
-                    description: 'Tela relacionada ao fluxo de chamados dentro da plataforma.',
-                    image: './assets/img/projects/sirus/chamado.png'
-                },
-                {
-                    project: 'Sirus',
-                    title: 'Formulário de chamado',
-                    description: 'Formulário para registro e detalhamento do atendimento.',
-                    image: './assets/img/projects/sirus/chamado-form.png'
-                },
-                {
-                    project: 'Sirus',
-                    title: 'Auditoria',
-                    description: 'Visão de auditoria para acompanhamento e rastreabilidade das operações.',
-                    image: './assets/img/projects/sirus/auditoria.png'
-                }
-            ],
-            'club-fullstack': [
-                {
-                    project: 'CRUD de Usuários e Formulário de Suporte',
-                    title: 'Listagem de usuários',
-                    description: 'Tela principal de consulta e gerenciamento dos usuários cadastrados.',
-                    image: './assets/img/projects/club-fullstack/listagem-usuarios.png'
-                }
-            ],
-            'radar-inclusivo': [
-                {
-                    project: 'Radar Inclusivo',
-                    title: 'Dashboard',
-                    description: 'Painel principal com a visão geral dos recursos e demandas.',
-                    image: './assets/img/projects/radar-inclusivo/dashboard.png'
-                },
-                {
-                    project: 'Radar Inclusivo',
-                    title: 'Login',
-                    description: 'Tela de autenticação da plataforma.',
-                    image: './assets/img/projects/radar-inclusivo/login.png'
-                },
-                {
-                    project: 'Radar Inclusivo',
-                    title: 'Barreiras de acessibilidade',
-                    description: 'Formulário para cadastro e acompanhamento de barreiras de acessibilidade.',
-                    image: './assets/img/projects/radar-inclusivo/barreiras-form.png'
-                },
-                {
-                    project: 'Radar Inclusivo',
-                    title: 'Materiais pedagógicos acessíveis',
-                    description: 'Listagem de materiais pedagógicos acessíveis centralizados no sistema.',
-                    image: './assets/img/projects/radar-inclusivo/materiais-pedagogicos-acessiveis-index.png'
-                }
-            ],
-            gnai: [
-                {
-                    project: 'GNAI',
-                    title: 'Dashboard',
-                    description: 'Painel principal com indicadores e atalhos para a gestão do núcleo.',
-                    image: './assets/img/projects/gnai/dashboard.png'
-                },
-                {
-                    project: 'GNAI',
-                    title: 'Login',
-                    description: 'Tela de autenticação da plataforma.',
-                    image: './assets/img/projects/gnai/login.png'
-                },
-                {
-                    project: 'GNAI',
-                    title: 'Alunos',
-                    description: 'Listagem de estudantes acompanhados pelo núcleo.',
-                    image: './assets/img/projects/gnai/alunos-index.png'
-                },
-                {
-                    project: 'GNAI',
-                    title: 'Empréstimos',
-                    description: 'Tela de gerenciamento de empréstimos de tecnologias assistivas.',
-                    image: './assets/img/projects/gnai/emprestimo-index.png'
-                },
-                {
-                    project: 'GNAI',
-                    title: 'Detalhes do PEI',
-                    description: 'Tela de acompanhamento dos detalhes do Plano Educacional Individualizado.',
-                    image: './assets/img/projects/gnai/PEI-detalhes.png'
-                }
-            ],
-            'sertao-pdv': [
-                {
-                    project: 'Sertão PDV',
-                    title: 'Frente de caixa',
-                    description: 'Tela principal de operação no ponto de venda.',
-                    image: './assets/img/projects/controle-bar/frente-de-caixa.png'
-                },
-                {
-                    project: 'Sertão PDV',
-                    title: 'Dashboard',
-                    description: 'Visão geral operacional com indicadores e atalhos principais.',
-                    image: './assets/img/projects/controle-bar/dashboard.png'
-                },
-                {
-                    project: 'Sertão PDV',
-                    title: 'Caixa',
-                    description: 'Tela voltada para controle de caixa e operação financeira.',
-                    image: './assets/img/projects/controle-bar/caixa.png'
-                },
-                {
-                    project: 'Sertão PDV',
-                    title: 'Formulário de comanda',
-                    description: 'Cadastro e edição de comandas dentro do fluxo de atendimento.',
-                    image: './assets/img/projects/controle-bar/comanda-form.png'
-                }
-            ]
-        };
-        const modal = document.getElementById('gallery-modal');
-        const modalImageLink = document.getElementById('gallery-modal-image-link');
-        const modalImage = document.getElementById('gallery-modal-image');
-        const modalProject = document.getElementById('gallery-modal-project');
-        const modalTitle = document.getElementById('gallery-modal-title');
-        const modalDescription = document.getElementById('gallery-modal-description');
-        const modalClose = document.getElementById('gallery-modal-close');
-        const modalPrev = document.getElementById('gallery-modal-prev');
-        const modalNext = document.getElementById('gallery-modal-next');
-        let currentIndex = 0;
-        let currentGallery = [];
+                const blockTop = block.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
 
-        function renderModal(index) {
-            const item = currentGallery[index];
-            modalImageLink.href = item.image;
-            modalImage.src = item.image;
-            modalImage.alt = item.title;
-            modalProject.textContent = item.project;
-            modalTitle.textContent = item.title;
-            modalDescription.textContent = item.description;
-            modalPrev.style.display = currentGallery.length > 1 ? 'inline-flex' : 'none';
-            modalNext.style.display = currentGallery.length > 1 ? 'inline-flex' : 'none';
-        }
-
-        function openModal(galleryKey, index = 0) {
-            currentGallery = projectGalleryItems[galleryKey] || [];
-            if (!currentGallery.length) {
-                return;
-            }
-            currentIndex = index;
-            renderModal(currentIndex);
-            modal.classList.add('open');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modal.classList.remove('open');
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-
-        function moveModal(step) {
-            currentIndex = (currentIndex + step + currentGallery.length) % currentGallery.length;
-            renderModal(currentIndex);
-        }
-
-        galleryTriggers.forEach((trigger) => {
-            trigger.addEventListener('click', () => openModal(trigger.dataset.galleryKey));
-            trigger.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    openModal(trigger.dataset.galleryKey);
+                if (blockTop > windowHeight * 0.75 && !marker.classList.contains('bounce-in')) {
+                    marker.classList.add('is-hidden');
+                    content.classList.add('is-hidden');
                 }
             });
+        }
+
+        function revealBlocksOnScroll() {
+            timelineBlocks.forEach((block) => {
+                const marker = block.querySelector('.cd-timeline-img');
+                const content = block.querySelector('.cd-timeline-content');
+                if (!marker || !content) {
+                    return;
+                }
+
+                const blockTop = block.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (blockTop <= windowHeight * 0.75 && marker.classList.contains('is-hidden')) {
+                    marker.classList.remove('is-hidden');
+                    marker.classList.add('bounce-in');
+                    content.classList.remove('is-hidden');
+                    content.classList.add('bounce-in');
+                }
+            });
+        }
+
+        hideOffscreenBlocks();
+        revealBlocksOnScroll();
+        window.addEventListener('scroll', revealBlocksOnScroll);
+        window.addEventListener('resize', hideOffscreenBlocks);
+    }
+
+    initTimelineAnimation();
+
+    const projectGalleryItems = {
+        'mundo-digital': [
+            {
+                project: 'Landing Page Mundo Digital',
+                title: 'Serviços',
+                description: 'Seção de serviços da landing page.',
+                image: './assets/img/projects/mundo-digital/servicos.png'
+            },
+            {
+                project: 'Landing Page Mundo Digital',
+                title: 'Sobre nós',
+                description: 'Bloco institucional com apresentação da empresa.',
+                image: './assets/img/projects/mundo-digital/sobre-nos.png'
+            }
+        ],
+        sirus: [
+            {
+                project: 'Sirus',
+                title: 'Dashboard',
+                description: 'Painel principal com a visão geral operacional da plataforma.',
+                image: './assets/img/projects/sirus/dashboard.png'
+            },
+            {
+                project: 'Sirus',
+                title: 'Chamado',
+                description: 'Tela relacionada ao fluxo de chamados dentro da plataforma.',
+                image: './assets/img/projects/sirus/chamado.png'
+            },
+            {
+                project: 'Sirus',
+                title: 'Formulário de chamado',
+                description: 'Formulário para registro e detalhamento do atendimento.',
+                image: './assets/img/projects/sirus/chamado-form.png'
+            },
+            {
+                project: 'Sirus',
+                title: 'Auditoria',
+                description: 'Visão de auditoria para acompanhamento e rastreabilidade das operações.',
+                image: './assets/img/projects/sirus/auditoria.png'
+            }
+        ],
+        gnai: [
+            {
+                project: 'GNAI',
+                title: 'Dashboard',
+                description: 'Painel principal com indicadores e atalhos para a gestão do núcleo.',
+                image: './assets/img/projects/gnai/dashboard.png'
+            },
+            {
+                project: 'GNAI',
+                title: 'Login',
+                description: 'Tela de autenticação da plataforma.',
+                image: './assets/img/projects/gnai/login.png'
+            },
+            {
+                project: 'GNAI',
+                title: 'Alunos',
+                description: 'Listagem de estudantes acompanhados pelo núcleo.',
+                image: './assets/img/projects/gnai/alunos-index.png'
+            },
+            {
+                project: 'GNAI',
+                title: 'Empréstimos',
+                description: 'Tela de gerenciamento de empréstimos de tecnologias assistivas.',
+                image: './assets/img/projects/gnai/emprestimo-index.png'
+            },
+            {
+                project: 'GNAI',
+                title: 'Detalhes do PEI',
+                description: 'Tela de acompanhamento dos detalhes do Plano Educacional Individualizado.',
+                image: './assets/img/projects/gnai/PEI-detalhes.png'
+            }
+        ],
+        'sertao-pdv': [
+            {
+                project: 'Sertão PDV',
+                title: 'Frente de caixa',
+                description: 'Tela principal de operação no ponto de venda.',
+                image: './assets/img/projects/controle-bar/frente-de-caixa.png'
+            },
+            {
+                project: 'Sertão PDV',
+                title: 'Dashboard',
+                description: 'Visão geral operacional com indicadores e atalhos principais.',
+                image: './assets/img/projects/controle-bar/dashboard.png'
+            },
+            {
+                project: 'Sertão PDV',
+                title: 'Caixa',
+                description: 'Tela voltada para controle de caixa e operação financeira.',
+                image: './assets/img/projects/controle-bar/caixa.png'
+            },
+            {
+                project: 'Sertão PDV',
+                title: 'Formulário de comanda',
+                description: 'Cadastro e edição de comandas dentro do fluxo de atendimento.',
+                image: './assets/img/projects/controle-bar/comanda-form.png'
+            }
+        ]
+    };
+    document.querySelectorAll('.project-feature').forEach((project) => {
+        const items = projectGalleryItems[project.dataset.galleryKey] || [];
+        const image = project.querySelector('.project-gallery-image');
+        const caption = project.querySelector('.project-gallery-caption');
+        const previous = project.querySelector('.project-gallery-prev');
+        const next = project.querySelector('.project-gallery-next');
+        let index = 0;
+        let autoplay = null;
+
+        if (!items.length || !image || !caption) return;
+
+        const renderGallery = () => {
+            const item = items[index];
+            image.src = item.image;
+            image.alt = `${item.title} — ${item.description}`;
+            caption.querySelector('strong').textContent = item.title;
+            caption.querySelector('span').textContent = item.description;
+            caption.querySelector('small').textContent = `${index + 1} / ${items.length}`;
+        };
+
+        const moveGallery = (step) => {
+            index = (index + step + items.length) % items.length;
+            renderGallery();
+            image.classList.remove('is-changing');
+            void image.offsetWidth;
+            image.classList.add('is-changing');
+        };
+
+        const stopAutoplay = () => {
+            if (autoplay) window.clearInterval(autoplay);
+            autoplay = null;
+        };
+
+        const startAutoplay = () => {
+            stopAutoplay();
+            if (items.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            autoplay = window.setInterval(() => moveGallery(1), 9000);
+        };
+
+        previous?.addEventListener('click', () => moveGallery(-1));
+        next?.addEventListener('click', () => moveGallery(1));
+        const gallery = project.querySelector('.project-gallery');
+        gallery?.setAttribute('tabindex', '0');
+        caption.setAttribute('aria-live', 'off');
+        gallery?.addEventListener('mouseenter', stopAutoplay);
+        gallery?.addEventListener('mouseleave', startAutoplay);
+        gallery?.addEventListener('focusin', stopAutoplay);
+        gallery?.addEventListener('focusout', startAutoplay);
+        gallery?.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') moveGallery(-1);
+            if (event.key === 'ArrowRight') moveGallery(1);
         });
 
-        modalClose.addEventListener('click', closeModal);
-        modalPrev.addEventListener('click', () => moveModal(-1));
-        modalNext.addEventListener('click', () => moveModal(1));
+        if (items.length < 2) {
+            previous?.remove();
+            next?.remove();
+        }
 
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
-            }
+        startAutoplay();
+    });
+
+    const imageViewer = document.getElementById('image-viewer');
+    const imageViewerImage = document.getElementById('image-viewer-image');
+
+    document.querySelectorAll('.project-gallery-image').forEach((image) => {
+        image.addEventListener('click', () => {
+            imageViewerImage.src = image.src;
+            imageViewerImage.alt = image.alt;
+            imageViewer.classList.add('open');
+            imageViewer.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
         });
+    });
 
-        document.addEventListener('keydown', (event) => {
-            if (!modal.classList.contains('open')) {
-                return;
-            }
+    const closeImageViewer = () => {
+        imageViewer.classList.remove('open');
+        imageViewer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
 
-            if (event.key === 'Escape') {
-                closeModal();
-            }
+    imageViewer.addEventListener('click', (event) => {
+        if (event.target !== imageViewerImage) closeImageViewer();
+    });
 
-            if (event.key === 'ArrowLeft') {
-                moveModal(-1);
-            }
-
-            if (event.key === 'ArrowRight') {
-                moveModal(1);
-            }
-        });
-    </script>
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && imageViewer.classList.contains('open')) closeImageViewer();
+    });
+</script>
 </body>
 </html>
